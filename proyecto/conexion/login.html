@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="../css/logins.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+
+  <body>
+    <div class="formulario">
+      <img src="../img/logohosp.png" />
+      <h2>Iniciar Sesión</h2>
+      <form id="iniciarSesion">
+        <div class="campo">
+          <label>Usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Ingrese su usuario..." />
+          <span class="icono"><i class="fa-solid fa-user"></i></span>
+        </div>
+        <div class="campo">
+          <label>Contraseña</label>
+          <input class="input-contrasenia" type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese su contraseña..." />
+          <span class="icono"><i class="fa-solid fa-lock"></i></span>
+          <span class="i-contrasenia"><i class="fa-solid fa-eye"></i></span>
+        </div>
+
+        <div class="aviso">
+          <a href="olvidecontraseña.html">¿Olvidaste tu contraseña?</a>
+        </div>
+        <input type="submit" value="Inciar sesión" />
+        <div class="registrarse">¿No tienes una cuenta? <a href="./tipoderegistro.html">Registrarse</a></div>
+      </form>
+    </div>
+    <script src="../js/mostrar.js"></script>
+  </body>
+</html>

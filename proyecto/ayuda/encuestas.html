@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuestas</title>
+</head>
+<body>
+
+<div class="contenedor">
+  <header>
+    <h1>Encuestas</h1>
+  </header>
+
+
+    <select class="campos-registro" id="campos-registro">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Ingresar tu nombre">
+    
+  
+        <br>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" placeholder="Ingresar tu correo">
+      </div>
+    </select>
+  
+  <form id="form-encuesta">
+
+
+
+    <div class="pregunta1">
+      <label class="pregunta-titulo">Pregunta 1</label>
+      <textarea placeholder="Respuesta 1"></textarea>
+    </div>
+
+    <div class="pregunta2">
+      <label class="pregunta-titulo">Pregunta 2</label>
+      <div class="toggle-si-no">
+        <button type="button" class="btn-toggle" data-toggle="si">Sí</button>
+        <button type="button" class="btn-toggle" data-toggle="no">No</button>
+      </div>
+    </div>
+
+    <br>
+
+
+
+    <div class="pregunta3">
+      <label class="pregunta-titulo">Pregunta 3</label>
+      <div class="opciones">
+        <label class="opcion">
+          <input type="checkbox" name="multiple" value="opcion1">
+          <span>Opción 1</span>
+        </label>
+        <label class="opcion">
+          <input type="checkbox" name="multiple" value="opcion2">
+          <span>Opción 2</span>
+        </label>
+        <label class="opcion">
+          <input type="checkbox" name="multiple" value="opcion3">
+          <span>Opción 3</span>
+        </label>
+        <label class="opcion">
+          <input type="checkbox" name="multiple" value="opcion4">
+          <span>Opción 4</span>
+        </label>
+      </div>
+    </div>
+
+     <br>
+
+
+    <div class="pregunta4">
+      <label class="pregunta-titulo">Pregunta 4</label>
+      <div class="opciones">
+        <label class="opcion">
+          <input type="radio" name="unica" value="opcion1">
+          <span>Opción 1</span>
+        </label>
+        <label class="opcion">
+          <input type="radio" name="unica" value="opcion2">
+          <span>Opción 2</span>
+        </label>
+        <label class="opcion">
+          <input type="radio" name="unica" value="opcion3">
+          <span>Opción 3</span>
+        </label>
+        <label class="opcion">
+          <input type="radio" name="unica" value="opcion4">
+          <span>Opción 4</span>
+        </label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-enviar">Enviar encuesta</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

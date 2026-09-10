@@ -1,0 +1,68 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.contenedor2 {
+  position: relative;
+  min-height: 100vh;
+}
+
+header {
+  background-color: rgb(96, 183, 209);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+  font-size: 50px;
+  
+}
+
+
+.salir {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+}
+
+.button {
+  position: fixed;
+  text-align: left;
+  padding: 50px;
+  font-size: 50px;
+  border-radius: 20%;
+  border: none;
+  color: rgb(96, 183, 209);
+  bottom: 0%;
+  left: 0%;
+}
+
+.buttonmas {
+  font-size: 40px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 100px;
+
+  color: black;
+  text-align: center;
+  border-radius: 2px;
+  padding: 3px ;
+  position: absolute;
+  z-index: 1;
+  font-size: 12px;
+}
+
+.buttonmas:hover  + .tooltiptext {
+  visibility: visible;
+}
