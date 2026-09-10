@@ -1,7 +1,6 @@
 <?php 
 
 
-
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -36,8 +35,9 @@ $descripcionruta =$_POST['descripcionruta'];
 
 
 
-$insertarDatos = $con ->prepare ("INSERT INTO registro_traslado
- (elemento,
+$insertarDatos = $con ->prepare ("INSERT INTO  registro_traslado
+ ( 
+ elemento,
  id_conductor,
  nombre_conductor,
  id_acompaniante,

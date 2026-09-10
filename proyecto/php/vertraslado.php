@@ -10,12 +10,10 @@ while ($fila = $resultado->fetch_assoc()) {
     echo "<h2>📄 Traslados </h2>";
 
      
-    echo "<a href='editartraslado.php?id="  . "' class='editar'>";
-    echo "✏️";
-    echo "</a>";
-
-
-
+    
+    
+    echo "<a href='../php/eliminar_registro.php?id=" . $fila['id'] . "'>❌</a>";
+    echo "<a href='../php/editar_registro.php?id=" . $fila['id'] . "'>✏️</a>";
 
     echo "<p><strong>Elemento:</strong> " . $fila['elemento'] . "</p>";
 

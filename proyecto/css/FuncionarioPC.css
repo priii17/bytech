@@ -86,6 +86,14 @@ main {
 
 
 .contenedor2{
+     display: grid;
+  grid-template-areas:
+    "header"
+    "main "
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  width: 100%;
     display: flex;
     flex-direction: column;
     
@@ -93,33 +101,34 @@ main {
 }
 
 .header {
- display: flex;
-
-font-size: 30px;
- grid-area: header;
-  background-color: rgb(201, 235, 245);
-  padding: 40px;
-  gap: 85px;
-  flex-wrap: wrap;
+grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(201, 235, 245);
+    padding: 30px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    
 }
-
 .ambulancia {
-  display: flex;
-justify-content:right;
-align-items: center;
-margin-left: 600px;
-font-size: 40px;
+ display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-size: 30px;
 }
 
 
 
 .contenedor2 .header div{
- font-size: 60px;
+ font-size: 30px;
 
 
 }
 
 .contenedor2 main {
+  grid-area: main;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -166,14 +175,13 @@ font-size: 20px;
   visibility: visible;
 }
 
-    #lista-traslados {
+     main #lista-traslados {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
         padding: 20px;
           background-color: white;
         border-radius: 12px;
-        padding: 20px;
         box-shadow: 0 3px 10px rgba(0,0,0,0.15);
         border-left: 5px solid #4da6d9;
            margin-top: 0;
@@ -199,6 +207,8 @@ footer {
   margin-top: 15px;
   align-items: end;
 }
+
+
 /*  CSS DE registroT*/
 
 .body2 {
@@ -298,18 +308,28 @@ select {
   }
 }
 
-button[type="button"] {
-  border: 1px solid;
-  background: #2691d9;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  width: 300px;
-  height: 200px;
-  background-color: rgb(201, 235, 245);
-
+.registro{
+  grid-area: main;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
   flex-direction: column;
+}
+
+
+
+
+button[type="sumbit2"] {
+  width: auto;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  align-items: center;
+  justify-content: center;
 }
