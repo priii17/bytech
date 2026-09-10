@@ -24,7 +24,13 @@ $insertarDatos->bind_param(
 
 
 if($insertarDatos->execute()){
-      echo "enviado";
+   echo "<script>";
+    echo "window.location.href = '../traslado/Traslado.html';";
+    echo "</script>";
+
+    exit;
+
+
 
 }else{
      echo "Error al guardar";

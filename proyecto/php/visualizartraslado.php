@@ -20,7 +20,7 @@ $nombre_acompaniante =$_POST['nombre_acompaniante'];
 
 $id_ambulancia =$_POST['id_ambulancia'];
 $modelo = $_POST['modelo'];
-$matricula =$_POST['matricula'];
+$matricula_ambulancia =$_POST['matricula_ambulancia'];
 
 $descripcionorigen  = $_POST['descripcionorigen'];
 $fecha_origen  = $_POST['fecha_origen'];
@@ -44,7 +44,7 @@ $insertarDatos = $con ->prepare ("INSERT INTO registro_traslado
  nombre_acompaniante,
  id_ambulancia,
  modelo,
- matricula,
+ matricula_ambulancia,
  descripcionorigen,
  fecha_origen,
  hora_origen,
@@ -63,7 +63,7 @@ $id_acompaniante,
 $nombre_acompaniante,
 $id_ambulancia,
 $modelo,
-$matricula,
+$matricula_ambulancia,
 $descripcionorigen,
 $fecha_origen,
 $hora_origen,
@@ -75,7 +75,7 @@ $descripcionruta);
 
 
 if($insertarDatos->execute()){
-echo ("location: ../login/") "enviado";
+echo "enviado";
 
 }else{
      echo "Error al guardar";

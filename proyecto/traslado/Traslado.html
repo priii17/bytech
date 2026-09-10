@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <div class="contenedor2"></div>
+    <div class="contenedor2" >
 
 
 <header class="header">
@@ -48,17 +48,31 @@
 <button class="buttonmas" id="boton"> ➕ </button>
   <span class="tooltiptext">Crear traslado </span>
 
+</div></div>
+ <div id="lista-traslados" ></div>
 
-</div>
-</div>
+    <script>
+        fetch("../php/vertraslado.php")
+            .then(respuesta => respuesta.text())
+            .then(datos => {
+                document.getElementById("lista-traslados").innerHTML = datos;
+            })
+            .catch(error => {
+                console.log("Error:", error);
+            });
+    </script>
 
-</div>
+
+
+
+
 </main>
 
 
 
 <script src="../js/volver.js"></script>
 <script src="../js/registroAtraslado.js"> </script>
+<a href="../php/vertraslado.php"></a>
 
 </body>
 </html>
