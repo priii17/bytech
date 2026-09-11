@@ -3,59 +3,71 @@
 
 require_once 'conexion.php'; 
 
-function registrarAmbulancia($con) {
-    echo "Matricula: ";
-    $Matricula = trim(fgets(STDIN));
+function registrarAmbulancia ($con) {
+
+    echo "Seleccione registro: ";
+    $matricula = trim(fgets(STDIN));
     echo "modelo : ";
     $modelo = trim(fgets(STDIN));
 
-    // AJUSTAR: nombres de columnas reales de tu tabla ambulancias
-    $stmt = $con->prepare("INSERT INTO ambulancia (Matricula, modelo) VALUES (:Matricula, :modelo)");
-    $stmt->execute([
-        'Matricula' => $Matricula,
-        'modelo' => $modelo
-    ]);
-    echo " registro correctamente.\n";
-}
+    // edita en ambulancia en db 
+    $stmt = $con->prepare("INSERT INTO ambulancia (matricula, modelo) VALUES (?,?)");
+       
 
+    $stmt->bind_param("ss", $matricula, $modelo);
+
+    if ($stmt->execute()) {
+        echo " registro correctamente.\n";
+    } else {
+        echo "Error al registrar: " . $stmt->error . "\n";
+    }
+
+
+    $stmt->close();
+}
 function registrarInsumo($con) {
     echo "Nombre del insumo: ";
     $nombre = trim(fgets(STDIN));
-    echo "descripción: ";
+    echo "descripcion: ";
     $descripcion = trim(fgets(STDIN));
 
-    // AJUSTAR: nombres de columnas reales de tu tabla insumos
-    $stmt = $con->prepare("INSERT INTO insumos (nombre,descripcion ) VALUES (:nombre, :descripcion)");
-    $stmt->execute([
-        'nombre' => $nombre,
-        'descrpcion' => $descripcion
-    ]);
-    echo "registro correctamente.\n";
+    // edita en la tabla insumos en la db
+    $stmt = $con->prepare("INSERT INTO insumos (nombre, descripcion ) VALUES (?,?)");
+
+     $stmt->bind_param("ss", $nombre, $descripcion);
+
+    if ($stmt->execute()) {
+        echo " registro correctamente.\n";
+    } else {
+        echo "Error al registrar: " . $stmt->error . "\n";
+    }
 }
 
 function subirDocumento($con) {
-    echo "nombre";
-    $nombre = trim(fgets(STDIN));
+    echo "nombre:";
+    $nombre_documento = trim(fgets(STDIN));
     echo "tipo: ";
-    $tipo = trim(fgets(STDIN));
+    $tipo_documento = trim(fgets(STDIN));
 
-    // AJUSTAR: nombres de columnas reales de tu tabla documentos
-    $stmt = $con->prepare("INSERT INTO documento (nombre, tipo) VALUES (: :ruta_archivo)");
-    $stmt->execute([
-        'referencia_id' => $referencia_id,
-        'ruta_archivo' => $ruta
-    ]);
-    echo "Documento registrado correctamente.\n";
+    //edita en la tabla documento en DB
+    $stmt = $con->prepare("INSERT INTO documento (nombre_documento, tipo_documento) VALUES (?,? )");
+      $stmt->bind_param("ss", $nombre_documento, $tipo_documento);
+
+    if ($stmt->execute()) {
+        echo " registro correctamente.\n";
+    } else {
+        echo "Error al registrar: " . $stmt->error . "\n";
+    }
 }
 
-// ==== MENÚ PRINCIPAL ====
+// MENÚ PRINCIPAL 
 
 
 while (true) {
-    echo "\n===== MENÚ DE ADMINISTRACIÓN DE BASE DE DATOS =====\n" ;
-    echo "1) Registrar ambulancia\n";
-    echo "2) Registrar insumo\n";
-    echo "3) Subir documento\n";
+    echo "\n MENÚ DE BD\n" ;
+    echo "1) Registrar \n";
+    echo "2) registar\n";
+    echo "3) registrar \n";
     echo "4) Salir\n";
     echo "Elija una opción: ";
 
