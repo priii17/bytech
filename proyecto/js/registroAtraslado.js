@@ -4,7 +4,7 @@
         if (Atraslado){  
  
  Atraslado.addEventListener('click', () => {
- window.location.href='../login/Traslado.html'
+ window.location.href='../traslado/Traslado.html'
 
   })
 }

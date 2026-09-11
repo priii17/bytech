@@ -4,7 +4,7 @@
         if (buttonmas){  
  
  buttonmas.addEventListener('click', () => {
- window.location.href='../login/registroTraslado.html'
+ window.location.href='../traslado/registroTraslado.html'
 
   })
 }
