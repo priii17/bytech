@@ -9,14 +9,13 @@
   </head>
 
   <body class="body3">
-    
-      <main>
-        <div class="formulario">
-          <form id="formularioCarga">
-            <span class="icono-doc"><i class="fa-regular fa-folder-closed"></i></span>
+    <main>
+      <div class="formulario">
+        <form id="formularioCarga">
+          <span class="icono-doc"><i class="fa-regular fa-folder-closed"></i></span>
 
-            <h2>Subir documento</h2>
-            <!--
+          <h2>Subir documento</h2>
+          <!--
             <div class="campo">
               <label>Paciente</label>
               <input type="text" placeholder="Nombre paciente..." name="paciente" required />
@@ -24,45 +23,54 @@
             </div>
           -->
 
-            <div class="cargar">
-              <label for="nombre">Nombre del documento:</label>
-              <input type="text" id="nombre" name="nombre" />
-              <div class="tipodocumento">
-                <label for="tipo"><i class="fa-solid fa-file-medical"></i>Tipo de documento: </label>
-                <br />
-                <select name="tipo" id="tipo" required>
-                  <option value="selecciona">Selecciona una opcion</option>
-                  <option value="opcion1">Indicaciones de interrupción voluntaria del embarazo</option>
-                  <option value="opcion2">Prostatectomía radical (indicaciones e información para el paciente).</option>
-                  <option value="opcion3">Preparación para estudios imagenológicos</option>
-                  <option value="opcion4">Estudios diagnósticos con pertecneciato</option>
-                  <option value="opcion5">Centellograma de perfusión miocárdica</option>
-                  <option value="opcion6">Indicaciones ecocardiograma con dobutamina</option>
-                  <option value="opcion7">Indicaciones para pacientes en tratamiento con warfarina</option>
-                  <option value="opcion8">Indicaciones para ingreso a centro de nefrología y trasplante</option>
-                  <option value="opcion9">Plan de alta enfermería, Nefrología</option>
-                  <option value="opcion10">Indicaciones de enfermería para usuarios trasplantados</option>
-                  <option value="opcion11">Prevención de infecciones</option>
-                  <option value="opcion12">Encuesta de satisfacción del usuario trasplantado</option>
-                  <option value="opcion13">Pauta para pacientes ostomizados</option>
-                </select>
-              </div>
-
-              <label for="documento"><i class="fa-solid fa-file-arrow-up"></i>Seleccionar documento</label>
-              <input type="file" id="documento" name="documento" />
-
-              <div id="mensaje"></div>
-
-              <div class="generarqr">
-                <i class="fa-solid fa-qrcode"></i>
-                <button type="button">Generar QR</button>
-              </div>
-              <input type="submit" value="Subir" id="btn" />
+          <div class="cargar">
+            <label for="nombre">Nombre del documento:</label>
+            <input type="text" id="nombre" name="nombre" />
+            <div class="tipodocumento">
+              <label for="tipo"><i class="fa-solid fa-file-medical"></i>Tipo de documento: </label>
+              <br />
+              <select name="tipo" id="tipo" required>
+                <option value="selecciona">Selecciona una opcion</option>
+                <option value="Indicaciones de interrupción voluntaria del embarazo">
+                  Indicaciones de interrupción voluntaria del embarazo
+                </option>
+                <option value="Prostatectomía radical (indicaciones e información para el paciente)">
+                  Prostatectomía radical (indicaciones e información para el paciente).
+                </option>
+                <option value="Preparación para estudios imagenológicos">Preparación para estudios imagenológicos</option>
+                <option value="Estudios diagnósticos con pertecneciato">Estudios diagnósticos con pertecneciato</option>
+                <option value="Centellograma de perfusión miocárdica">Centellograma de perfusión miocárdica</option>
+                <option value="Indicaciones ecocardiograma con dobutamina">Indicaciones ecocardiograma con dobutamina</option>
+                <option value="Indicaciones para pacientes en tratamiento con warfarina">
+                  Indicaciones para pacientes en tratamiento con warfarina
+                </option>
+                <option value="Indicaciones para ingreso a centro de nefrología y trasplante">
+                  Indicaciones para ingreso a centro de nefrología y trasplante
+                </option>
+                <option value="Plan de alta enfermería, Nefrología">Plan de alta enfermería, Nefrología</option>
+                <option value="Indicaciones de enfermería para usuarios trasplantados">
+                  Indicaciones de enfermería para usuarios trasplantados
+                </option>
+                <option value="Prevención de infecciones">Prevención de infecciones</option>
+                <option value="Encuesta de satisfacción del usuario trasplantado">Encuesta de satisfacción del usuario trasplantado</option>
+                <option value="Pauta para pacientes ostomizados">Pauta para pacientes ostomizados</option>
+              </select>
             </div>
-          </form>
-        </div>
-      </main>
-    
+
+            <label for="documento"><i class="fa-solid fa-file-arrow-up"></i>Seleccionar documento</label>
+            <input type="file" id="documento" name="documento" />
+
+            <div id="mensaje"></div>
+
+            <div class="generarqr">
+              <i class="fa-solid fa-qrcode"></i>
+              <button type="button">Generar QR</button>
+            </div>
+            <input type="submit" value="Subir" id="btn" />
+          </div>
+        </form>
+      </div>
+    </main>
 
     <script src="../js/cargarDocumento.js"></script>
   </body>

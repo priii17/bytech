@@ -10,7 +10,7 @@ while ($fila = $resultado->fetch_assoc()) {
     echo "<h2>📄 Documentos </h2>";
 
      
-    echo "<a href='editardocumento.php ?id=" . $fila['id'] . "' class='editar'>";
+    echo "<a href='editar_documento.php?id=" . $fila['id'] . "' class='editar'>";
     echo "✏️";
     echo "</a>";
   

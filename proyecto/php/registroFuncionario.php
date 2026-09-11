@@ -19,16 +19,16 @@ $insertarDatos = $con->prepare("INSERT INTO personas (cedula,nombre,apellido,fec
 $insertarDatos->bind_param('isss', $cedula, $nombre, $apellido, $nacimiento);
 $insertarDatos->execute();
 
-$id_fk = $con->last_id;
+$id_fk = $con->insert_id;
 
 
 $insertarFuncionario = $con->prepare("INSERT INTO funcionario (id, usuario, contrasenia, email) VALUES (?,?,?,?)");
 $insertarFuncionario->bind_param('isss', $id_fk, $usuario, $hash, $email);
 
 if ($insertarFuncionario->execute()) {
-    echo "ok";
+    echo "Funcionario guardado correctamente";
 } else {
-    echo "error";
+    echo "No se guardo funcionario";
 }
 
 $con->close();

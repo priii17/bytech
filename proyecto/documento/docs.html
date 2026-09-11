@@ -46,13 +46,13 @@
           <button id="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
-        <div id="lista-traslados"></div>
+        <div id="lista-documentos"></div>
 
         <script>
           fetch("../php/verdocumento.php")
             .then((respuesta) => respuesta.text())
             .then((datos) => {
-              document.getElementById("lista-traslados").innerHTML = datos;
+              document.getElementById("lista-documentos").innerHTML = datos;
             })
             .catch((error) => {
               console.log("Error:", error);

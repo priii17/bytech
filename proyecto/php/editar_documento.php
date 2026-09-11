@@ -9,11 +9,11 @@ $id = $_GET["id"];
 
 $sentencia = $con->prepare("
     SELECT
-        id_documento,
+        id,
         nombre_documento,
         tipo_documento
     FROM documento
-    WHERE id_documento = ?
+    WHERE id= ?
 ");
 
 $sentencia->bind_param("i", $id);
@@ -31,12 +31,12 @@ if (!$documento) {
 <body class="body2">
 <h1>Actualizar documento</h1>
 
-<form action="./actualizar_documento.php" method="POST" class="contenedor3">
+<form action="actualizar_documento.php" method="POST" class="contenedor3">
     <link rel="stylesheet" href="../css/documento.css">
 
-    <!-- ID -->
+   
     <input type="hidden" name="id"
-           value="<?php echo $documento['id_documento']; ?>">
+           value="<?php echo $documento['id']; ?>">
 
   
     <p>Nombre del documento:</p>
@@ -65,7 +65,7 @@ if (!$documento) {
         Guardar cambios
     </button>
 
-    <a href="./docs.html">
+    <a href="../documento/docs.html">
         Volver
     </a>
 
