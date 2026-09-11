@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro Funcionario</title>
+    <link rel="stylesheet" href="../css/logins.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+
+  <body>
+    <div class="formulario">
+      <img src="../img/logohosp.png" />
+      <h2>Registrarse</h2>
+      <form  id="registro" novalidate>
+        <div class="campo">
+          <label>Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre..." required />
+          <span class="icono"><i class="fa-solid fa-user"></i></span>
+        </div>
+
+        <div class="campo">
+          <label>Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido..." />
+          <span class="icono"> <i class="fa-solid fa-user"></i></span>
+        </div>
+
+        <div class="campo">
+          <label>Usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Cree su usuario..." />
+          <span class="icono"><i class="fa-solid fa-user"></i></span>
+        </div>
+        <div class="campo">
+          <label>Email</label>
+          <input type="email" id="email" name="email" placeholder="Ingrese su email..." />
+          <span class="icono"><i class="fa-solid fa-at"></i></span>
+        </div>
+
+        <div class="campo">
+          <label>Cédula de Identidad</label>
+          <input type="text" id="cedula" name="cedula" placeholder="Ingrese su cédula de identidad..." />
+          <span class="icono"><i class="fa-regular fa-address-card"></i></span>
+        </div>
+
+        <div class="campo">
+          <label>Fecha de Nacimiento</label>
+          <input type="date" id="nacimiento" name="nacimiento" />
+          <span class="icono"><i class="fa-solid fa-cake-candles"></i></span>
+        </div>
+        <div class="campo">
+          <label>Contraseña</label>
+          <input class="input-contrasenia" type="password" id="contrasenia" name="contrasenia" placeholder="Ingrese una contraseña" />
+          <span class="icono"><i class="fa-solid fa-lock"></i></span>
+          <span class="i-contrasenia"><i class="fa-solid fa-eye"></i></span>
+        </div>
+<!--
+        <div class="campo">
+          <label>Confirmar contraseña</label>
+          <input class="input-contrasenia" type="password" id="contrasenia2" name="contrasenia" placeholder="Confirmar contraseña" />
+          <span class="icono"><i class="fa-solid fa-lock"></i></span>
+          <span class="i-contrasenia"><i class="fa-solid fa-eye"></i></span>
+        </div>
+     
+        <div class="campo">
+          <label>Código de Verificación</label>
+          <input type="text" placeholder="Ingrese codigo de verificación..."  />
+          <span class="icono"><i class="fa-solid fa-key"></i></span>
+        </div>
+         -->
+        <input type="submit" value="Registrarse" />
+        <p class="errores"></p>
+        <div class="Iniciar Sesión">¿Ya tienes una cuenta? <a href="../conexion/login.html">Iniciar Sesión</a></div>
+      </form>
+    </div>
+    <script src="../js/mostrar.js"></script>
+    <script src="../js/registroFuncionario.js"></script>
+  
+  </body>
+</html>
