@@ -139,6 +139,8 @@ footer {
   flex-direction: column;
 
   margin-top: 200px;
+  position: relative;
+  align-self: flex-start;
 }
 #subir {
   width: 50px;
@@ -148,7 +150,6 @@ footer {
   background-color: #d2faff;
   font-size: large;
   cursor: pointer;
-  position: relative;
 }
 
 #subir button:hover {
@@ -158,13 +159,16 @@ footer {
 
 .texto {
   position: absolute;
-  bottom: 160px;
-  left: 50px;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+
   visibility: hidden;
   background-color: #d2faff;
   color: black;
   font-size: 14px;
-  transform: translateX(30%);
+  white-space: nowrap;
 }
 
 button:hover + .texto {
@@ -430,6 +434,21 @@ input[type="submit"]:hover {
 .aviso button:hover {
   border-color: #2691d9;
   transition: 0.5s;
+}
+
+#lista-traslados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border-left: 5px solid #4da6d9;
+  margin-top: 0;
+  color: #1d5f85;
+  margin: 8px 0;
 }
 
 @media screen and (max-width: 600px) {

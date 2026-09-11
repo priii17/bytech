@@ -12,7 +12,7 @@
     <div class="contenedor1">
       <header>
         <nav>
-               <div class="barra-izquierda">
+          <div class="barra-izquierda">
             <a href="../index.html" class="tooltip">
               <span id="inicio"> <i class="fa-solid fa-house"> </i> </span> <span class="tooltiptext"> Inicio </span>
             </a>
@@ -33,11 +33,10 @@
             >
             <a href="#logo"></a>
           </div>
-     
+        </nav>
       </header>
       <main>
-       
-       <div id="icono-doc">
+        <div id="icono-doc">
           <i class="fa-regular fa-folder-closed"></i>
         </div>
 
@@ -47,10 +46,18 @@
           <button id="lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
-        <ul>
-          <?php include '../php/mostrardoc.php'; echo $lista; ?>
-        </ul>
+        <div id="lista-traslados"></div>
 
+        <script>
+          fetch("../php/verdocumento.php")
+            .then((respuesta) => respuesta.text())
+            .then((datos) => {
+              document.getElementById("lista-traslados").innerHTML = datos;
+            })
+            .catch((error) => {
+              console.log("Error:", error);
+            });
+        </script>
         <div class="boton">
           <button id="subir">
             <i class="fa-solid fa-plus"></i>

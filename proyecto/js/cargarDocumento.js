@@ -1,8 +1,8 @@
-const nombre = document.getElementById ("nombre");
+const nombre = document.getElementById("nombre");
 const documento = document.getElementById("documento");
 const btn = document.getElementById("btn");
 const mens = document.getElementById("mensaje");
-const tipo= document.getElementById("tipo");
+const tipo = document.getElementById("tipo");
 
 btn.addEventListener("click", async (e) => {
   // cancela la acción por defecto que hace el navegador al ocurrir un evento
@@ -21,15 +21,13 @@ btn.addEventListener("click", async (e) => {
     body: doc,
   });
 
-  let mensaje = await respuesta.text();
+  let mensaje = (await respuesta.text()).trim();
 
-  if (mensaje === "0") {
-  mens.textContent = "OK";
-  mens.style.color = "green";
-} else {
-  mens.textContent = "ERROR";
-  ;mens.style.color = "red";
+  if (mensaje === "Guardado correctamente") {
+    mens.textContent = "OK";
+    mens.style.color = "green";
+  } else {
+    mens.textContent = "ERROR";
+    mens.style.color = "red";
   }
 });
-
-
