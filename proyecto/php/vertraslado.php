@@ -1,7 +1,7 @@
 <?php
 require_once "conexion.php";
 
-$resultado = $con->query("SELECT * FROM registro_traslado");
+$resultado = $con->query ("SELECT * FROM registro_traslado");
 
 while ($fila = $resultado->fetch_assoc()) {
 
