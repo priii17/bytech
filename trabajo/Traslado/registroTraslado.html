@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../FuncionarioPC.css">
+</head>   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+<body class="body2">
+  
+
+<form class="Contenedor3" action="../php/visualizartraslado.php" method="POST">
+
+<main>
+
+ <header>
+       <section class="volver">
+        <span class="boton"> 
+               <a href="#" class="salir" id="volver2"> <i class="fa-solid fa-arrow-left"></i></a>
+          <span class="tooltiptext"> volver </span>  
+        </span>  </section>
+    </header>
+
+      <h1> Registrar Traslado </h1>
+
+<p> Elemento a trasladar:</p>
+
+<br>
+<div class="fold">
+  <select id="Trasladar" name="elemento" required>
+    <option value=""> Seleccione  </option> 
+    <option value="persona"> Paciente</option>
+    <option value="muestra"> Muestra </option> 
+    <option value="equipamiento" > Equipamiento</option>
+    <option value="insumos"> Insumos</option>
+  </select> 
+
+
+
+<div id="foldmuestra" class="fold-oculto">
+  <label for="tipo"> </label>
+  <br><br>
+  <input type="text" id="nombremuestra" placeholder="nombre">
+  <br><br>
+  <input type="text" id="descripcionmuestra" placeholder="Descripción">
+</div>
+
+<br>
+
+<div id="foldequipamiento" class="fold-oculto">
+  <label for="tipo2"> </label>
+  <input type='text' id='n_serie' placeholder="Ingrese n_serie">
+  <br><br>
+  <input type="text" id="descripcionquipamiento" placeholder="Descripción"> 
+</div>
+
+<br>
+
+<div  id="foldinsumos"  class="fold-oculto">
+<label  for="tipo3"></label>
+<input type="text" id="nombreinsumo" placeholder="Ingrese nombre del insumo">
+<br> <br>
+
+<input type="text"  id="descripcioninsumo" placeholder="Descripción">
+
+
+</div>
+
+
+
+<p>Conductor:</p>
+
+<br>
+
+ <input type="text" name="conductor" id="nombre_conductor"  placeholder="Ingrese su nombre" required>
+
+ <br> <br>
+             
+ <input type="number" name="CI_conductor"  id="CI_conductor"  placeholder="Ingrese su cédula" required>
+
+<br>
+
+<p> Acompañante:</p>
+
+
+
+<option value="Copiloto">Copiloto</option>  
+
+<option value="Acompañante">Acompañante</option>
+
+</select>
+
+<br> <br>
+
+<input type="text" name="acompaniante" id="nombre"  placeholder="Ingrese su nombre" required>
+
+<br> <br>
+
+<input type="number" name="CI_acompaniante" id="CI_acompaniante" placeholder="Ingrese su cédula" required>
+
+<p> Ambulancia: </p>
+    
+
+<textarea  type="text"  name="modelo" id="" cols="25" rows="5" placeholder="Ingrese un modelo:" required> </textarea>
+
+<br> 
+
+<p> Matricula </p>
+
+<textarea  type="text" name="matricula" id="" cols="25" rows="5" placeholder="Ingrese una matricula:" required> </textarea>
+
+
+<p> Origen: </p>
+
+<br>
+
+<input type="text" id="descripcionorigen" placeholder="Descripción" required>
+
+<br><br>
+
+<input type="date" id="fecha_origen" name="fecha_origen" placeholder="fecha" required > 
+
+<br><br>
+
+<input type="time" id="hora_origen"  name="hora_origen "    placeholder="hora" required >
+
+<br>
+
+
+<p> Destino: </p>
+
+<br>
+
+<input type="text" id="Descripciondestino"    placeholder="Descripción" required >
+
+<br><br>
+
+<input type="date" id="fecha_destino"    name="hora_destino"   placeholder="fecha" required>
+
+<br><br>
+
+<input type="time" id="hora_destino"    name="fecha_destino"    placeholder="hora" required>
+ 
+
+<p>  Ruta: </p>
+
+<select id="Ruta" name="ruta" required>
+
+<option value="Urbano"> Urbano </option>
+
+<option value="Carretera"> Carretera </option>
+
+<option value="Internacional"> Internacional </option>
+
+
+</select>
+<input type="text" id="descripcionruta"   name="descripcionruta"      placeholder="Descripción">
+
+
+<br> <br> <br>
+
+<div class="Atraslado">
+<div class="buttontraslado">
+<button type="submit"  id="botontraslado"> Registrar traslado </button>
+</div></div>
+</main> 
+
+    
+
+
+
+</form>
+<script src="/Traslado/Funcionario.js"></script>
+<script src="volver.js"></script>
+<script src="/inicio.js"></script>
+<script src="./registroAtraslado.js"> </script>
+</body>
+</html>
