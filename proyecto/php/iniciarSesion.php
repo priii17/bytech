@@ -7,7 +7,8 @@ session_start();
 $usuario= $_POST['usuario'];
 $contrasenia= $_POST['contrasenia'];
 
-$buscarUsuario=$con->prepare("SELECT usuario,password_hash FROM funcionario WHERE usuario=?");
+
+$buscarUsuario=$con->prepare("SELECT usuario,contrasenia,email FROM funcionario WHERE usuario=?");
 $buscarUsuario->bind_param('s', $usuario);
 $buscarUsuario->execute();
 
@@ -22,14 +23,13 @@ $fila=$resultado->fetch_assoc();
 
 header('content-type: application/json');
 
-if(password_verify($contrasenia,$fila['password_hash'])){
+if(password_verify($contrasenia,$fila['contrasenia'])){
     $_SESSION['usuario']=$fila['usuario'];
-    $_SESSION['contrasenia']=$fila['contrasenia'];
     $_SESSION['email']=$fila['email'];
 
     
 echo json_encode([
-    'Exito' => true,
+    'exito' => true,
     'usuario' => $fila]);
 }else 
 echo json_encode(['error' => 'Contraseña incorrecta']);
