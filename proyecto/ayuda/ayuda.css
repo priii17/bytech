@@ -1,0 +1,32 @@
+
+
+.accordeon{
+  width: 90%;
+  max-width: 120em;
+  background-color: #d2faff;
+  padding: 40em;
+}
+
+.accordeon .bloque{
+  background-color: red;
+  margin: 0 0 1em;
+  padding: 13em;
+}
+
+.accordeon .h2{
+  background-color: aqua;
+  margin: 0 0 1em;
+  padding: 1em;
+}
+
+.accordeon .contenido{
+  background-color: blue;
+  padding: 0em;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+.accordeon .bloque.activo .contenido{
+  height: 4em;
+}

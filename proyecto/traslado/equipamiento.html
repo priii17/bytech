@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Equipamiento</title>
+     <link rel="stylesheet" href="../css/FuncionarioPC.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+</head>
+<body class="body2" id="body2"  >
+    
+    <form class="Contenedor3" id="registro"  action="../php/guardar_equipamiento.php" method="POST">
+
+<main>
+    <header>
+
+
+ <section class="volver">
+        <span class="boton"> 
+      <a href="#" class="salir" id="volverAregistro"><a href="../traslado/registro_elementos.html" > <i class="fa-solid fa-arrow-left"></i></a></a>
+          <span class="tooltiptext"> volver </span>  
+
+
+
+
+        <h1>Registrar Equipamiento</h1>
+
+    </header>
+
+     <p>Número de Serie</p>
+    <input type="text" name="n_serie" id="n_serie" placeholder="Ingrese un número de serie" required>
+
+    <br>
+
+     <p>Descripción</p>
+    <input type="text" name="descripcion" id="descripcion" placeholder="Ingrese una descripción del equipamiento" required>
+
+<br>
+
+<button type="submit"> Registrar </button>
+
+</main>
+    </form>
+</body>
+</html>

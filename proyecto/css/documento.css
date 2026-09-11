@@ -1,0 +1,443 @@
+body {
+  background-color: white;
+
+  margin: 0;
+  font-family: Arial;
+  color: rgb(2, 2, 2);
+  font-size: 20px;
+  min-height: 100vh; /*altura pantalla*/
+}
+.contenedor1 {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main "
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  width: 100%;
+}
+
+.contenedor1 header {
+  grid-area: header;
+  background-color: rgb(201, 235, 245);
+  padding: 9px;
+  font-size: 16px;
+  width: 100%;
+}
+span {
+  color: #050505;
+}
+
+a {
+  color: #050505;
+}
+
+.contenedor1 .tooltip {
+  position: relative;
+}
+
+.contenedor1 .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+
+  color: #050505;
+  text-align: center;
+  border-radius: 2px;
+  padding: 3px;
+  position: absolute;
+  z-index: 1;
+  font-size: 12px;
+}
+
+.contenedor1 .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+}
+
+.contenedor1 .barra-izquierda {
+  display: flex;
+  align-items: center;
+  gap: 7.5rem;
+  margin-left: 15px;
+}
+
+.contenedor1 .barra-derecha {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 5px;
+}
+main {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  display: grid;
+  grid-area: footer;
+  background-color: rgb(96, 183, 209);
+  padding: 10px;
+  justify-content: center;
+  font-size: 16px;
+  margin-top: 15px;
+  align-items: end;
+}
+
+#derechos {
+  display: flex;
+  justify-content: center;
+}
+#icono-doc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.busqueda {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.busqueda input {
+  width: 16%;
+  position: relative;
+  padding: 6px;
+  padding-left: 39px;
+  border: solid;
+}
+
+#eliminar {
+  position: absolute;
+  background-color: white;
+  top: 8.2rem;
+  right: 34.5rem;
+  outline: none;
+  border: none;
+}
+
+#lupa {
+  position: absolute;
+  background-color: white;
+  top: 8.2rem;
+  left: 34.4rem;
+  outline: none;
+  border: none;
+}
+.boton {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+  flex-direction: column;
+
+  margin-top: 200px;
+  position: relative;
+  align-self: flex-start;
+}
+#subir {
+  width: 50px;
+  height: 50px;
+  border-radius: 80%;
+  border: none;
+  background-color: #d2faff;
+  font-size: large;
+  cursor: pointer;
+}
+
+#subir button:hover {
+  border-color: #d2faff;
+  transition: 0.5s;
+}
+
+.texto {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+
+  visibility: hidden;
+  background-color: #d2faff;
+  color: black;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+button:hover + .texto {
+  visibility: visible;
+}
+
+.body3 {
+  margin: 0;
+  min-height: 100vh; /*altura pantalla*/
+  font-family: Arial;
+  background-color: #d2faff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+.body3 main {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  border-radius: 35px;
+  padding: 25px;
+  padding-bottom: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formulario h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.formulario form {
+  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.icono-doc {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  margin-top: 0;
+}
+.campo {
+  position: relative;
+  margin-bottom: 20px;
+}
+.campo label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.icono {
+  position: absolute;
+  top: 35px;
+  left: 8px;
+  font-size: large;
+}
+.boton {
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.campo input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px; /*bordes redondos*/
+  padding-left: 39px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+input:focus {
+  border-color: #2691d9;
+  border-width: 2px;
+  outline: none;
+}
+
+.tipodocumento input {
+  display: flex;
+  flex-direction: column;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+select {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  align-items: center;
+  background-color: white;
+}
+
+select option {
+  padding: 6px;
+}
+select option:hover {
+  background-color: lightblue;
+}
+
+select option:checked {
+  background-color: lightblue;
+}
+
+select option::checkmark {
+  order: 1;
+}
+select::picker-icon {
+  transition: 0.4s transform;
+  margin-right: 6px;
+  font-size: 15px;
+}
+
+select:open::picker-icon {
+  transform: rotate(180deg);
+  color: #2691d9;
+}
+
+::picker(select) {
+  border-radius: 5px;
+  width: 65%;
+}
+.cargar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+input[type="submit"] {
+  align-self: center;
+  width: 65%;
+  height: 30px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 10px;
+  font-size: 15px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 4px;
+}
+
+input[type="submit"]:hover {
+  border-color: #2691d9;
+  transition: 0.5s;
+}
+
+.generarqr {
+  display: flex;
+  align-items: center;
+}
+.generarqr button {
+  justify-content: left;
+  width: 25%;
+  height: 25px;
+  border: 1px solid;
+  background: grey;
+  border-radius: 5px;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin: 9px;
+}
+
+.generarqr button:hover {
+  border-color: #2691d9;
+  transition: 0.5s;
+}
+#nombre {
+  width: 90%;
+  height: 19px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px; /*bordes redondos*/
+  padding-left: 39px;
+  font-size: 16px;
+}
+
+#documento::file-selector-button {
+  width: 47%;
+  height: 20px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 12px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  margin: 5px;
+}
+
+#documento::file-selector-button:hover {
+  border-color: #2691d9;
+  transition: 0.5s;
+}
+#lista-traslados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+
+.archivo {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid black;
+  font-size: 17px;
+}
+
+.campoeditar {
+  position: relative;
+  margin-bottom: 20px;
+}
+.campoeditar label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campoeditar input {
+  width: 150%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px; /*bordes redondos*/
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    min-width: 100vh;
+    min-height: 100vh;
+  }
+  #icono-doc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor1 header {
+    flex-direction: column;
+  }
+}

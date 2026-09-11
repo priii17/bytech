@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil_Paciente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="barra-nav">
+      <div class="logos">
+   <img src="https://www.hc.edu.uy/images/imagenesarticulos/Logo_Hc.jpg" alt="Logo Hospital de Clínicas">
+        <div class="logo-caja">
+          <span class="logo-marca"></span>
+          <span>Hospital de Clínicas</span>
+          <img src="Logo_Hc.png" alt="50">
+        </div>
+      </div>
+
+      <button class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="menu-nav">
+          <li><a href="paciente.html" class="activo">Perfil Paciente</a></li>
+          <li><a href="funcionario.html">Perfil Funcionario</a></li>
+          <li><a href="ayuda.html">Ayuda</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenido-principal">
+    <div class="encabezado-pagina">
+      <h1>Mi Perfil</h1>
+      <p>Consultar o actualizar tu información personal.</p>
+    </div>
+
+    <section class="diseno-perfil">
+
+      <!-- Foto de perfil -->
+      <div class="tarjeta tarjeta-foto-perfil">
+        <div class="avatar-perfil">
+          <span>MP</span>
+        </div>
+        <button class="boton-cambiar-foto" type="button">Cambiar foto de perfil</button>
+      </div>
+
+      <!-- Datos del paciente -->
+      <div class="tarjeta">
+        <h2>Datos</h2>
+        <ul class="lista-datos">
+          <li>
+            <span class="etiqueta-dato">Nombre completo</span>
+            <span class="valor-dato">Marcos Brum</span>
+          </li>
+          <li>
+            <span class="etiqueta-dato">Cédula de identidad</span>
+            <span class="valor-dato">5.123.456-7</span>
+          </li>
+          <li>
+            <span class="etiqueta-dato">Correo electrónico</span>
+            <span class="valor-dato">marcos.brum@correo.com</span>
+          </li>
+          <li>
+            <span class="etiqueta-dato">Teléfono</span>
+            <span class="valor-dato">+598 98 123 456</span>
+          </li>
+        </ul>
+
+        <div class="acciones-perfil">
+          <button class="boton boton-primario" type="button">Editar perfil</button>
+          <button class="boton boton-peligro" type="button">Cerrar sesión</button>
+        </div>
+      </div>
+
+    </section>
+  </main>
+ 
+  <footer class="pie-pagina">
+    <div class="contenido-pie">
+      <div>
+        <h4>Hospital de Clínicas "Dr. Manuel Quintela"</h4>
+        <p>Av. Italia s/n, Montevideo, Uruguay</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>Tel: (2) 487 0300</p>
+        <p><a href="Gmail:atencionalusuario@hc.edu.uy">atencionalusuario@hc.edu.uy</a> </a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
