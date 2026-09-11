@@ -28,10 +28,11 @@ if (!$documento) {
 }
 ?>
 
-<body class="body2">
-<h1>Actualizar documento</h1>
+<body class="body3">
+<h2>Actualizar documento</h2>
 
-<form action="actualizar_documento.php" method="POST" class="contenedor3">
+<div class="formulario">
+<form action="actualizar_documento.php" method="POST">
     <link rel="stylesheet" href="../css/documento.css">
 
    
@@ -39,25 +40,27 @@ if (!$documento) {
            value="<?php echo $documento['id']; ?>">
 
   
-    <p>Nombre del documento:</p>
-
-    <input type="text"
-           name="nombre"
-           value="<?php echo htmlspecialchars($documento['nombre_documento']); ?>"
+    <div class="campoeditar">
+        <label>Nombre del documento:</label>
+        <input type="text"
+               name="nombre"
+               value="<?php echo htmlspecialchars($documento['nombre_documento']); ?>"
            placeholder="Nombre del documento"
            required>
 
+           </div>
     <br><br>
 
- 
-    <p>Tipo de documento:</p>
+
+ <div class="campoeditar">
+    <label>Tipo de documento:</label>
 
     <input type="text"
            name="tipo"
            value="<?php echo htmlspecialchars($documento['tipo_documento']); ?>"
            placeholder="Tipo de documento"
            required>
-
+</div>
     <br><br>
 
     
@@ -68,6 +71,6 @@ if (!$documento) {
     <a href="../documento/docs.html">
         Volver
     </a>
-
+</div>
 </form>
 </body>

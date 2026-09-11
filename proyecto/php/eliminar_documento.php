@@ -7,7 +7,7 @@ if (!isset($_GET["id"])) {
 }
 $id = $_GET['id'];
 
-$sql = $con->prepare("DELETE FROM documento WHERE id_documento  = ?");
+$sql = $con->prepare("DELETE FROM documento WHERE id = ?");
 $sql->bind_param("i", $id);
 $sql->execute();
 
