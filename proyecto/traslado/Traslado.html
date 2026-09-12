@@ -49,7 +49,8 @@
   <span class="tooltiptext">Crear traslado </span>
 
 </div></div>
- <div id="lista-traslados" ></div>
+
+ <div id="lista-traslados" class="traslado2"></div>
 
     <script>
         fetch("../php/vertraslado.php")
@@ -62,6 +63,21 @@
             });
     </script>
 
+<div id="lista_traslados" class="traslado2"></div>
+ <script>
+        fetch("../php/vertraslado.php")
+            .then(respuesta => respuesta.text())
+            .then(datos => {
+                document.getElementById("lista-traslados").innerHTML = datos;
+            })
+            .catch(error => {
+                console.log("Error:", error);
+            });
+    </script>
+
+
+
+    
 
 
 

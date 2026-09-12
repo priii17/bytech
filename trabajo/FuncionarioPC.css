@@ -1,0 +1,355 @@
+.body{
+
+margin: 0;
+    font-family: Arial;
+    color: rgb(2, 2, 2);
+    font-size: 20px;
+
+}
+.contenedor1{  
+   display: grid;
+    grid-template-areas:
+     "header"
+     "main "
+     "footer";
+     grid-template-rows: auto  1fr auto ;
+    height: 100vh ;
+
+
+}
+
+
+.contenedor1 header {
+  grid-area: header;
+  background-color: rgb(201, 235, 245);
+  padding: 20px;
+  font-size: 28px;
+
+
+}
+
+
+span{ color: #050505;}
+
+a{color: #050505;}
+
+
+.contenedor1 .tooltip {
+  position:relative;
+
+
+}
+
+.contenedor1 .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+
+  color: #050505;
+  text-align: center;
+  border-radius: 2px;
+  padding: 3px ;
+  position: absolute;
+  z-index: 1;
+  font-size: 12px;
+
+}
+
+
+.contenedor1 .tooltip:hover  .tooltiptext {
+  visibility: visible;
+}
+
+
+nav {
+
+    display: flex;
+    gap: 80px; 
+    padding: 8px;
+  
+}
+
+ .barra-izquierda{
+ display: flex;   
+ gap: 80px;
+   align-items: center;
+}
+
+.barra-derecha{
+  align-items: center;
+ gap: 200px ;
+ column-gap: 50px;
+  margin-left:  20px;
+
+}
+
+main{
+  grid-area: main;
+}
+
+
+
+
+ 
+
+
+.contenedor1 footer{
+    grid-area: footer;
+      background-color: rgb(201, 235, 245);
+    padding:25px;
+
+
+}
+
+
+
+.contenedor2{
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+  
+.header {
+ display: flex;
+
+font-size: 30px;
+ grid-area: header;
+  background-color: rgb(201, 235, 245);
+  padding: 30px;
+  gap: 85px;
+  flex-wrap: wrap; 
+
+ 
+
+      
+
+}
+
+.ambulancia{
+  display: flex;
+justify-content:right;
+align-items: center;
+margin-left: 600px;
+font-size: 40px;
+}
+
+
+
+.contenedor2 .header div{
+ font-size: 60px;
+
+
+}
+
+
+
+.contenedor2 main{
+    display: flex;  
+justify-content: left; align-items: center;
+
+ }
+
+
+
+.nuevotraslado{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.button {
+  position:fixed;
+  text-align: left;
+  padding: 15px;
+  font-size: 20px;
+ border-radius: 12%;
+ border:none;
+bottom: 0%;
+left: 0%;
+ 
+
+}
+
+
+
+.buttonmas{
+font-size: 20px;   
+
+
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  
+  color: #050505;
+  text-align: center;
+  border-radius: 2px;
+  padding: 3px ;
+  position: absolute;
+  z-index: 1;
+  font-size: 12px;
+
+}
+
+
+.buttonmas:hover + .tooltiptext {
+  visibility: visible;
+}
+
+
+
+
+
+/*  CSS DE registroT*/
+
+.body2 {
+display: flex;
+  justify-content: center;
+align-items: center;
+height: 320vh;
+margin: 0;
+font-family: Arial;
+color: rgb(2, 2, 2);
+font-size: 20px;
+
+
+}
+
+ .Contenedor3{
+
+ max-width: 600px;
+ width: 100%;
+
+
+  
+ 
+
+
+}
+
+
+
+textarea{
+resize: none;
+color: #050505;
+
+}
+
+
+
+
+ .Contenedor3 header{
+    display: flex;
+  padding: 20px;
+  font-size: 20px;
+  align-items: center;
+  border: 0%;
+
+  
+ 
+
+}
+
+.Contenedor3 main {
+background-color: rgb(201, 235, 245);
+backdrop-filter: rgb(197, 197, 231);
+width: 500px;
+border-radius: 50px;
+flex-direction: column;
+padding: 30px;
+display:flex;
+margin-top: 20px;
+margin-bottom: 10px;
+  justify-content: center;
+align-items: center;
+
+}
+
+
+
+button[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+
+}
+
+
+
+input {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 10px; /*bordes redondeados*/
+}
+
+
+
+ select{
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 10px; /*bordes redondeados*/
+  
+}
+
+
+
+.Contenedor3
+ .fold-oculto{
+display: none;
+
+}
+
+.Contenedor3 .fold-visible{
+  display: block;
+}
+
+
+.botonvolver {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 60px;
+  color: black;
+  text-decoration: none;
+
+}
+
+
+
+
+.Contenedor3 {
+ #fold-muestra,
+ #fold-equipamiento,
+ #fold-insumos
+ {
+ 
+display: hidden;}}
+
+
+#body2{
+width: 100vh;
+
+ flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
