@@ -1,32 +1,55 @@
-
-
-.accordeon{
-  width: 90%;
-  max-width: 120em;
-  background-color: #d2faff;
-  padding: 40em;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif ;
+  box-sizing: border-box;
 }
 
-.accordeon .bloque{
-  background-color: red;
-  margin: 0 0 1em;
-  padding: 13em;
+body{
+  background-color:  rgb(201, 235, 245);
 }
 
-.accordeon .h2{
-  background-color: aqua;
-  margin: 0 0 1em;
-  padding: 1em;
+#accordion{
+  margin: 100px auto;
+  width: 600px;
 }
 
-.accordeon .contenido{
-  background-color: blue;
-  padding: 0em;
-  height: 0;
+#accordion li{
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#accordion li label{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#accordion li label button{
+  transform: rotate(90deg);
+  font-size: 20px;
+}
+
+#accordion label + input[type='radio']{
+  display: none;
+}
+
+#accordion .content{
+  padding: 0 10px;
+  line-height: 26px;
+  max-height: 0;
   overflow: hidden;
-  transition: all .5s ease;
+  transition: max-height 0.5s;
 }
 
-.accordeon .bloque.activo .contenido{
-  height: 4em;
+#accordion label + input[type='radio']:checked + .content{
+  max-height: 400px;
 }
