@@ -2,7 +2,7 @@
 
 require_once 'conexion.php';
 
-session_start();
+session_start();//array asociativo guarda datos de un usuario existente
 
 $usuario= $_POST['usuario'];
 $contrasenia= $_POST['contrasenia'];

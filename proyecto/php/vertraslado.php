@@ -7,13 +7,13 @@ while ($fila = $resultado->fetch_assoc()) {
 
     echo "<div class='archivo'>";
 
-    echo "<h2>📄 Traslados </h2>";
+    echo "<h2>Traslados </h2>";
 
      
     
     
-    echo "<a href='../php/eliminar_registro.php?id=" . $fila['id'] . "'>❌</a>";
-    echo "<a href='../php/editar_registro.php?id=" . $fila['id'] . "'>✏️</a>";
+    echo "<a href='../php/eliminar_registro.php?id=" . $fila['id'] . "'>Eliminar Traslado</a>";
+    echo "<a href='../php/editar_registro.php?id=" . $fila['id'] . "'>Editar registro</a>";
 
     echo "<p><strong>Elemento:</strong> " . $fila['elemento'] . "</p>";
 

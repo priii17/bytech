@@ -1,11 +1,11 @@
 <?php
-// menu.php
+ 
 
 require_once 'conexion.php'; 
 
 function registrarAmbulancia ($con) {
 
-    echo "Seleccione registro: ";
+    echo "Seleccione matricula: ";
     $matricula = trim(fgets(STDIN));
     echo "modelo : ";
     $modelo = trim(fgets(STDIN));
@@ -127,7 +127,8 @@ while (true) {
         echo "\n ¿Que desea registrar?\n" ;
         echo "1) Ambulancia \n";
         echo "2) Insumo\n";
-        echo "3) Salir\n";
+        echo "3) Documento\n";
+        echo "4) Salir\n";
         echo "Elija una opción: ";
 
         $registrar= trim(fgets(STDIN));
@@ -181,7 +182,7 @@ while (true) {
         }
         break;
 
-        case '4':
+        case '3':
             echo "Saliendo del script...\n";
             exit(0);
         default:
