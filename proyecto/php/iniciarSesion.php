@@ -1,0 +1,41 @@
+<?php 
+
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+require_once 'conexion.php';
+
+session_start();//array asociativo guarda datos de un usuario existente
+
+$usuario= $_POST['usuario'];
+$contrasenia= $_POST['contrasenia'];
+
+
+$buscarUsuario=$con->prepare("SELECT usuario,contrasenia,email FROM funcionario WHERE usuario=?");
+$buscarUsuario->bind_param('s', $usuario);
+$buscarUsuario->execute();
+
+$resultado=$buscarUsuario->get_result();
+
+if($resultado->num_rows===0){
+    echo json_encode(['error' => 'Usuario no encontrado']) ;
+    exit;
+}
+
+$fila=$resultado->fetch_assoc();
+
+header('content-type: application/json');
+
+if(password_verify($contrasenia,$fila['contrasenia'])){
+    $_SESSION['usuario']=$fila['usuario'];
+    $_SESSION['email']=$fila['email'];
+
+    
+echo json_encode([
+    'exito' => true,
+    'usuario' => $fila['usuario']]);
+}else 
+echo json_encode(['error' => 'Contraseña incorrecta']);
+
+$buscarUsuario -> close();
+?>
