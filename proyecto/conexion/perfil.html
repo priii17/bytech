@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tu perfil</title>
+    <link rel="stylesheet" href="../css/perfil.css" />
+    <script src="https://kit.fontawesome.com/e5a1affeb5.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <a href="real_index.html" class="volver"> <i class="fa-solid fa-arrow-left-long"></i></a>
+    <main class="tarjeta">
+      <!-- circulo con la inicial del nombre se completa con js-->
+      <div class="avatar" id="avatar">?</div>
+      <h1 id="nombre">Cargando...</h1>
+
+      <!-- lista  dt = etiqueta, dd = valor -->
+      <dl class="datos">
+        <dt>Apellido</dt>
+        <dd id="apellido">-</dd>
+        <dt>Cédula</dt>
+        <dd id="cedula">-</dd>
+        <dt>Email</dt>
+        <dd id="email">-</dd>
+      </dl>
+
+      <p class="error" id="error"></p>
+    </main>
+
+    <!-- El script va al final para que los elementos de arriba ya existan cuando corra -->
+    <script src="../js/perfil.js"></script>
+  </body>
+</html>

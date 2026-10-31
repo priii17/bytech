@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ver registros</title>
+    <link rel="stylesheet" href="../css/insumosyequipamientos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body class="body2">
+    <header class="barra-navegador">
+      <nav>
+        <ul>
+          <li><a href="../conexion/real_index.html">Inicio</a></li>
+          <li><a href="../documento/docs.html">Documentos</a></li>
+          <li><a href="./Traslado.html">Traslados</a></li>
+          <li><a href="../traslado/verregistroselementos.html">Registros</a></li>
+          <li><a href="../traslado/verregistroselementos.html">Ver Registros</a></li>
+          <li><a href="../encuestas/encuestas.html">Encuestas</a></li>
+          <li><a href="../ayuda/ayuda.html">Ayuda</a></li>
+          <li><a href="../conexion/perfil.html">Perfil</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="Contenedor3">
+
+   <a href="../traslado/registro_elementos.html" class="boton" aria-label="Volver">
+  <i class="fa-solid fa-arrow-left"></i>
+  <span class="tooltiptext">volver</span>
+</a>
+
+
+      <main>
+        <div id="lista-insumos" class="traslado2"></div>
+
+        <script>
+          fetch("../php/ver_insumos.php")
+            .then((respuesta) => respuesta.text())
+            .then((datos) => {
+              document.getElementById("lista-insumos").innerHTML = datos;
+            })
+            .catch((error) => {
+              console.log("Error:", error);
+            });
+        </script>
+
+        <div id="lista-equipamientos" class="traslado2"></div>
+
+        <script>
+          fetch("../php/verequipamientos.php")
+            .then((respuesta) => respuesta.text())
+            .then((datos) => {
+              document.getElementById("lista-equipamientos").innerHTML = datos;
+            })
+            .catch((error) => {
+              console.log("Error:", error);
+            });
+        </script>
+
+        <div id="lista-ambulancia" class="traslado2"></div>
+
+        <script>
+          fetch("../php/ver_ambulancia.php")
+            .then((respuesta) => respuesta.text())
+            .then((datos) => {
+              document.getElementById("lista-ambulancia").innerHTML = datos;
+            })
+            .catch((error) => {
+              console.log("Error:", error);
+            });
+        </script>
+      </main>
+    </div>
+  </div>
+  </body>
+</html>

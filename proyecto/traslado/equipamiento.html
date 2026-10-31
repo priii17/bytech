@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de equipamiento</title>
+    <link rel="stylesheet" href="../css/insumosyequipamientos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+
+    <form class="form" id="registro" action="../php/guardar_equipamiento.php" method="POST">
+
+        <a href="../traslado/registro_elementos.html" class="boton" aria-label="Volver">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span class="tooltiptext">volver</span>
+        </a>
+
+        <p class="title">Registrar equipamiento</p>
+        <p class="message">Completa los datos del equipamiento.</p>
+
+        <label>
+            <input class="input" type="text" name="n_serie" id="n_serie" placeholder=" " required>
+            <span>Número de serie</span>
+        </label>
+
+        <label>
+            <input class="input" type="text" name="descripcion" id="descripcion" placeholder=" " required>
+            <span>Descripción</span>
+        </label>
+
+        <button class="submit" type="submit">Ingresar</button>
+
+    </form>
+
+</body>
+</html>

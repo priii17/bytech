@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/FuncionarioPC.css" />
+    <link rel="stylesheet" href="../css/documento.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="body5">
+    <div class="contenedor2">
+      <header class="barra-navegador">
+        <nav>
+          <ul>
+            <li><a href="../conexion/real_index.html">Inicio</a></li>
+            <li><a href="../documento/docs.html">Documentos</a></li>
+            <li><a href="../traslado/Traslado.html">Traslados</a></li>
+            <li><a href="../traslado/registro_elementos.html">Registros</a></li>
+            <li><a href="../encuestas/encuestas.html">Encuestas</a></li>
+            <li><a href="../ayuda/ayuda.html">Ayuda</a></li>
+            <li><a href="../conexion/perfil.html">Perfil</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <a class="buttonmas" href="../traslado/registroTraslado.html">
+          <i class="fa-solid fa-plus"></i> Crear traslado
+        </a>
+
+        <div id="lista-traslados" class="traslado2"></div>
+
+        <script>
+          // le pide al  servidor el HTML que arma vertraslado.php
+          fetch("../php/vertraslado.php")
+            .then((respuesta) => respuesta.text())
+            .then((datos) => {
+              document.getElementById("lista-traslados").innerHTML = datos;
+            })
+            .catch((error) => {
+              console.log("Error:", error);
+            });
+        </script>
+      </main>
+    </div>
+
+    <script src="../js/ver_infotraslado.js"></script>
+
+    <a href="../php/vertraslado.php"></a>
+    <a href="../php/editartraslado.php"> </a>
+  </body>
+</html>

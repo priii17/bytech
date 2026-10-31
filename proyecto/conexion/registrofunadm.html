@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro Funcionario</title>
+    <link rel="stylesheet" href="../css/logins.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+
+  <body>
+    <main class="pagina_login">
+      <section class="login" aria-labelledby="titulo-login">
+        <div class="login_imagen" aria-hidden="true">
+          <img class="hospital" src="../img/hospital-de-clinicas2.jpg" />
+        </div>
+
+        <div class="login_panel">
+          <p class="nombreHospital">Hospital de clinicas</p>
+
+          <h1 class="titulo" id="titulo-login">Registrarse</h1>
+
+          <p class="subtitulo">Crea una cuenta como funcionario</p>
+
+          <form class="form" id="registro">
+            <label>
+              <input id="nombre" name="nombre" type="text" placeholder=" " required />
+              <span>Nombre</span>
+            </label>
+
+            <label>
+              <input id="apellido" name="apellido" type="text" placeholder=" " required />
+              <span>Apellido</span>
+            </label>
+
+            <label>
+              <input id="cedula" name="Cedula" type="text" placeholder=" " required />
+              <span>Cédula</span>
+            </label>
+
+            <label>
+              <input id="nacimiento" name="nacimiento" type="date" required />
+              <span>Fecha de nacimiento</span>
+            </label>
+
+            <label>
+              <input id="usuario" name="usuario" type="text" placeholder=" " required />
+              <span>Usuario</span>
+            </label>
+
+            <label>
+              <input id="email" name="email" type="text" placeholder=" " required />
+              <span>Email</span>
+            </label>
+
+            <label>
+              <input id="contrasenia" name="contrasenia" type="password" placeholder=" " required />
+              <span>Contraseña</span>
+            </label>
+
+            <button class="boton" type="submit">Iniciar Sesión <span aria-hidden="true">&rarr;</span></button>
+          </form>
+          <p class="cl-login08__foot">¿Ya tienes una cuenta? <a class="cl-login08__link" href="index.html">Inicia sesión</a></p>
+        </div>
+      </section>
+    </main>
+    <script src="../js/mostrar.js"></script>
+    <script src="../js/registroFuncionario.js"></script>
+  </body>
+</html>

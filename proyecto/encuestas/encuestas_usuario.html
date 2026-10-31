@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../css/usuario.css" />
+  </head>
+  <body class="body7">
+    <header class="barra-navegador">
+      <nav>
+        <ul>
+          <li><a href="../conexion/index_pacientehtml">Inicio</a></li>
+          <li><a href="../paciente/escanear.html">Escanear</a></li>
+          <li><a href="../encuestas/encuestas_usuario.html">Encuestas</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-paciente">
+      <div
+        class="contenedor7"
+        action="../php/guardar_respuesta.php"
+        method="POST"
+      >
+        <h2 class="titulo">Encuestas de satisfacción</h2>
+        <div id="contenido"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Bytech .Todos los derechos reservados.</p>
+      <p>hospitaldeclinicas@gmail.com</p>
+      <p>1953/0800 1953</p>
+    </footer>
+    <script src="../js/encuesta_usuario.js"></script>
+  </body>
+</html>

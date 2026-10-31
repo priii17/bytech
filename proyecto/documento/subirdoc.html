@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subir documento</title>
+    <link rel="stylesheet" href="../css/documento.css" />
+  </head>
+  <body class="bodydoc">
+    <main>
+      <form id="formularioCarga" class="form">
+        <h2 class="titulo">Subir Documento</h2>
+        <p class="subtitulo">Completa los datos del documento.</p>
+
+        <label>
+          <input type="text" name="nombre" id="nombre" placeholder=" " required />
+          <span>Nombre documento:</span>
+        </label>
+
+        <label>
+          <input type="file" id="documento" name="documento" />
+          <span>Seleccionar documento</span>
+        </label>
+        <div id="mensaje"></div>
+
+        <button class="guardar" type="submit" id="btn">Guardar documento</button>
+
+        <p class="signin">
+          <a href="docs.html"> <i class="fa-solid fa-arrow-left"></i> Volver </a>
+        </p>
+      </form>
+    </main>
+
+    <script src="../js/cargarDocumento.js"></script>
+  </body>
+</html>

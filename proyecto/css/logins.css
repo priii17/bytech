@@ -1,0 +1,191 @@
+:root {
+  --azul-titulo: #1769aa;
+  --azul-boton: #1976bd;
+  --azul-boton-hover: #125b91;
+  --fondo: #f1f6fb;
+  --texto: #26374a;
+  --texto-suave: #526477;
+  --borde: #cbd5e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-image: url("../conexion/hospital-de-clinicas.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+  color: var(--texto);
+}
+
+.pagina_login {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 40px 16px;
+}
+
+.login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 960px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 30px 60px -30px rgba(47, 138, 87, 0.45);
+  color: #2b1d16;
+  line-height: 1.5;
+}
+
+.login_imagen {
+  min-height: 500px;
+}
+
+.hospital {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+.login_panel {
+  padding: clamp(40px, 5vw, 52px); /* ajusta el padding segun el tamaño de la pantalla */
+  padding: 45px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 15px;
+}
+
+.nombreHospital {
+  margin: 0 0 22px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px 0;
+}
+
+.titulo {
+  margin: 0 0 6px;
+  font-size: clamp(28px, 3.4vw, 36px);
+  font-weight: 900;
+  line-height: 1.1; /*interlineado*/
+  color: var(--azul-titulo);
+}
+
+.subtitulo {
+  margin: 0 0 26px;
+  font-size: 17px;
+  color: var(--texto-suave);
+}
+
+/* Campo con etiqueta flotante */
+.form label {
+  position: relative;
+  display: block;
+}
+
+input {
+  display: block;
+  width: 100%;
+  min-height: 54px;
+  padding: 22px 12px 8px;
+  border: 1px solid var(--borde);
+  border-radius: 7px;
+  background: #fffaf7;
+  color: var(--texto);
+  font: inherit;
+  font-size: 16px;
+}
+
+.form label span {
+  position: absolute;
+  left: 12px;
+  top: 15px;
+  font-size: 14px;
+  color: #6b7c8f;
+  pointer-events: none;
+  transition:
+    top 0.2s,
+    font-size 0.2s,
+    color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--azul-boton);
+  box-shadow: 0 0 0 3px rgba(25, 118, 189, 0.15);
+}
+
+input:focus + span,
+input:not(:placeholder-shown) + span {
+  top: 6px;
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--azul-titulo);
+}
+
+.boton {
+  width: 100%;
+  height: 60px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--azul-boton);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.boton:hover {
+  background: var(--azul-boton-hover);
+}
+
+.boton:focus-visible {
+  outline: 2px solid var(--azul-boton);
+  outline-offset: 2px;
+}
+
+.login a {
+  color: #3552d6;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 780px) {
+  .login {
+    grid-template-columns: 1fr;
+    border-radius: 28px;
+  }
+
+  .login_imagen {
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .login_panel {
+    padding: 28px;
+  }
+}

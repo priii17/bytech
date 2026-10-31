@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/FuncionarioPC.css">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+ 
+</head> 
+
+
+<body class="body2">
+  
+
+<form  class="Contenedor3" action="../php/guardar_traslado.php" method="POST">
+
+
+  <main>
+
+<header>
+    <section class="volver">
+        <span class="boton">
+            <a href="./Traslado.html" class="salir" id="volver"> <i class="fa-solid fa-arrow-left"></i> </a>
+            <span class="tooltiptext">Volver</span>
+        </span>
+    </section>
+  </header>
+
+    
+      <h1> Registrar Traslado </h1>
+
+<p> Elemento:</p>
+
+<div class="campo">
+  <select id="Trasladar" name="elemento" required>
+    <option value="">-- Seleccione --</option>
+    <option value="persona">Paciente</option>
+    <option value="equipamiento">Equipamiento</option>
+    <option value="insumos">Insumos</option>
+  </select>
+</div>
+
+<br>
+
+<div class="campo" id="campo-persona" style="display:none;">
+  <label for="id_paciente">Paciente</label>
+  <br>
+</div>
+
+<div class="campo" id="campo-insumos" style="display:none;">
+  <label for="id_insumo">Insumo</label>
+  <br>
+  <select id="id_insumo" name="id_insumo">
+    <option value="">-- Elegir --</option>
+  </select>
+</div>
+
+<div class="campo" id="campo-equipamiento" style="display:none;">
+  <label for="id_equipamiento">Equipamiento</label>
+  <br>
+  <select id="id_equipamiento" name="id_equipamiento">
+    <option value="">-- Elegir --</option>
+  </select>
+</div>
+
+
+
+
+  <div class="campo">
+ <label for="id_conductor">Conductor:</label>
+ <br>
+<select id="id_conductor" name="id_conductor" required>
+  <option value="">-- Elegir --</option>
+</select>
+  </div>
+
+    <div class="campo">
+<label for="id_acompaniante">Acompañante:</label>
+<br>
+<select id="id_acompaniante" name="id_acompaniante">
+  <option value="">-- Sin acompañante --</option>
+</select>
+    </div>
+
+
+
+      <div class="campo">
+<label for="id_ambulancia">Ambulancia</label>
+<select id="id_ambulancia" name="id_ambulancia" required>
+  <option value="">-- Elegir --</option>
+</select> 
+      </div>
+
+  <div class="campo">
+<p> Origen: </p>
+
+<br>
+<select id="departamento_origen" name="departamento_origen" required>
+    <option value=""> --Seleccione--  </option> 
+     <option value="Montevideo">Montevideo</option>
+    <option value="Canelones">Canelones</option>
+    <option value="Rocha">Rocha</option>
+    <option value="Florida">Florida</option>
+    <option value="Treinta y Tres">Treinta y Tres</option>
+    <option value="Cerro Largo">Cerro Largo</option>
+    <option value="Paysandú">Paysandú</option>
+    <option value="Salto">Salto</option>
+    <option value="Artigas">Artigas</option>
+    <option value="Río Negro">Río Negro</option>
+    <option value="Tacuarembó">Tacuarembó</option>
+    <option value="Flores">Flores</option>
+    <option value="Lavalleja">Lavalleja</option>
+    <option value="Maldonado">Maldonado</option>
+    <option value="Colonia">Colonia</option>
+    <option value="Durazno">Durazno</option>
+    <option value="Rivera">Rivera</option>
+    <option value="San José">San José</option>
+    <option value="Soriano">Soriano</option>
+  </select> 
+</div>
+
+  <input type="date" id="fecha_origen" name="fecha_origen" required>
+
+  <input type="time" id="hora_origen" name="hora_origen" required>
+
+<input type="text" id="descripcionorigen" name="descripcionorigen" placeholder="Dirección de origen" required>
+
+<button type="button" id="buscar_origen">Buscar</button>
+
+<input type="hidden" id="lat_origen" name="lat_origen">
+
+<input type="hidden" id="lng_origen" name="lng_origen">
+
+<br>
+
+  <div class="campo">
+<p> Destino: </p>
+
+<br>
+
+<select id="departamento_destino" name="departamento_destino" required>
+    <option value=""> --Seleccione--  </option> 
+   <option value="Montevideo">Montevideo</option>
+    <option value="Canelones">Canelones</option>
+    <option value="Rocha">Rocha</option>
+    <option value="Florida">Florida</option>
+    <option value="Treinta y Tres">Treinta y Tres</option>
+    <option value="Cerro Largo">Cerro Largo</option>
+    <option value="Paysandú">Paysandú</option>
+    <option value="Salto">Salto</option>
+    <option value="Artigas">Artigas</option>
+    <option value="Río Negro">Río Negro</option>
+    <option value="Tacuarembó">Tacuarembó</option>
+    <option value="Flores">Flores</option>
+    <option value="Lavalleja">Lavalleja</option>
+    <option value="Maldonado">Maldonado</option>
+    <option value="Colonia">Colonia</option>
+    <option value="Durazno">Durazno</option>
+    <option value="Rivera">Rivera</option>
+    <option value="San José">San José</option>
+    <option value="Soriano">Soriano</option>
+</select>
+  </div>
+
+    <input type="date" id="fecha_destino" name="fecha_destino" required>
+
+  <input type="time" id="hora_destino" name="hora_destino" required>
+
+<input type="text" id="Descripciondestino" name="descripcion_destino" placeholder="Dirección de destino" required>
+
+<button type="button" id="buscar_destino">Buscar</button>
+
+<input type="hidden" id="lat_destino" name="lat_destino">
+
+<input type="hidden" id="lng_destino" name="lng_destino">
+  
+
+<br>
+
+
+<div id="visualizar"></div>
+
+<br>
+<button type="button" id="trazar_ruta">Trazar ruta</button>
+<br><br>
+<div class="Atraslado">
+<div class="buttontraslado">
+<button type="submit"> Registrar traslado </button>
+</div></div>
+</main> 
+
+  
+
+</main>
+</form>
+
+
+<script src="../js/direccionmapa.js"></script>
+
+<script src="../js/CargaF.js" ></script>
+
+<script src="../js/cargar_ambulancia.js" ></script>
+
+<script src="../js/Listar.js"></script>
+
+
+</body>
+</html>

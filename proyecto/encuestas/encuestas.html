@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuestas</title>
+
+    <link rel="stylesheet" href="../css/encuestas.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body class="body7">
+  
+      <header class="barra-navegador">
+        <nav>
+          <ul>
+            <li><a href="../conexion/real_index.html">Inicio</a></li>
+            <li><a href="../documento/docs.html">Documentos</a></li>
+            <li><a href="../traslado/Traslado.html">Traslados</a></li>
+            <li><a href="../traslado/registro_elementos.html">Registros</a></li>
+            <li><a href="./encuestas.html">Encuestas</a></li>
+            <li><a href="../ayuda/ayuda.html">Ayuda</a></li>
+            <li><a href="../conexion/perfil.html">Perfil</a></li>
+          </ul>
+        </nav>
+      </header>
+  <main>
+
+    <div id="lista-encuestas">
+      <script>
+        const cont = document.getElementById("lista-encuestas");
+
+        fetch("../php/ver_encuesta.php")
+          .then((r) => r.text())
+          .then((html) => {
+            cont.innerHTML = html;
+          })
+          .catch((err) => {
+            cont.textContent = "Error al cargar las encuestas: " + err.message;
+            console.error(err);
+          });
+      </script>
+</main>
+ <footer>
+      <p>&copy; 2026 Bytech .Todos los derechos reservados.</p>
+      <p>hospitaldeclinicas@gmail.com</p>
+      <p>1953/0800 1953</p>
+    </footer>
+
+    <a href="../php/listar_encuestas.php"></a>
+    <a href="../php/eliminar_encuesta.php"></a>
+  </body>
+</html>

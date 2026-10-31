@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+      <link rel="stylesheet" href="../css/encuestas.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+</head>
+    <body class="body5">
+    <div class="contenedor7"action="../php/guardar_encuesta.php" method="POST">
+
+      
+
+<form>
+     <header>
+ <section class="volver">
+ <span class="boton">
+   <a href="../encuestas/encuestas.html" class="salir">
+     <i class="fa-solid fa-arrow-left"></i>
+    </a>
+                
+        <span class="tooltiptext">volver</span>
+    </span>
+</section>
+       <br>
+       </header>
+    <input id="titulo" placeholder="Título del formulario">
+
+<textarea id="descripcion" placeholder="Descripción"></textarea>
+
+<div id="preguntas"></div>
+
+<button type="button" id="btnAgregar">Agregar pregunta</button>
+
+
+
+
+<button type="button" id="btnGuardar">
+     <a href="../encuestas/encuestas.html"></a>
+
+  
+  Guardar formulario</button>
+
+  <button type="button" id="btnVista">Vista previa</button>
+<div id="vista-previa"></div>
+
+
+</form>
+<script src="../js/encuestas.js"></script>
+
+
+</body>
+</html>

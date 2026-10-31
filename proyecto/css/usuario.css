@@ -1,0 +1,378 @@
+:root {
+  --azul-titulo: #1769aa;
+  --azul-boton: #1976bd;
+  --azul-boton-hover: #125b91;
+  --azul-oscuro: #0d4775;
+  --celeste-hover: rgb(190, 220, 231);
+  --fondo: #f1f6fb;
+  --texto: #26374a;
+  --texto-suave: #526477;
+  --borde: #cbd5e0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.barra-navegador {
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+.barra {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  padding: 8px 6%;
+  font-size: 11px;
+  color: var(--texto-suave);
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+}
+.topbar .tel {
+  color: var(--azul-titulo);
+  font-weight: 700;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 6%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--azul-titulo);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+}
+nav a {
+  color: var(--texto);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.barra-navegador nav a:hover {
+  background: var(--celeste-hover);
+  color: var(--azul-oscuro);
+}
+
+.info {
+  background:
+    linear-gradient(rgba(10, 12, 16, 0.65), rgba(10, 12, 16, 0.8)),
+    url("../conexion/hospital-de-clinicas.jpg") center / cover no-repeat,
+    #1b1d22;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 6% 60px;
+  gap: 18px;
+}
+.bara-navegador .logo {
+  font-size: 44px;
+}
+
+.btn-borde {
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 8px 22px;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #fff;
+}
+.btn-borde:hover {
+  background: #fff;
+  color: var(--oscuro);
+}
+.datos2 {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+}
+.datos {
+  background: #f4f4f4;
+  color: #555;
+  width: 84px;
+  height: 52px;
+  border-radius: 3px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+  border-top: 3px solid #4a89dc;
+}
+
+h2 {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 14px;
+}
+h2 span {
+  color: var(--naranja-txt);
+}
+
+main {
+  grid-area: main;
+}
+
+details {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+}
+
+.titulos {
+  color: #2691d9;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  color: #444;
+}
+
+details p {
+  font-size: 13px;
+  line-height: 1.6;
+  padding-top: 8px;
+  color: #666;
+}
+summary:focus-visible,
+.btn-cta:focus-visible,
+.btn-borde:focus-visible,
+nav a:focus-visible {
+  outline: 2px solid var(--naranja);
+  outline-offset: 2px;
+}
+footer {
+  margin-top: auto;
+  background-color: var(--azul-titulo);
+  text-align: center;
+  color: white;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.main-paciente {
+  padding-top: 25px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.titulo {
+  color: var(--azul-titulo);
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+.message {
+  color: var(--texto-suave);
+  font-size: 15px;
+  margin-top: 0;
+}
+
+#contenido {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+#contenido .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+  max-width: 90%;
+  padding: 16px 20px;
+  border: 1px solid #e0e7ef;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--azul-titulo);
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px -12px rgba(47, 110, 180, 0.35);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#contenido .item:hover {
+  border-color: var(--azul-titulo);
+  box-shadow: 0 10px 24px -10px rgba(47, 110, 180, 0.4);
+  transform: translateY(-2px);
+}
+
+#contenido .item:focus-visible {
+  outline: 2px solid var(--azul-boton);
+  outline-offset: 3px;
+}
+
+#contenido h3 {
+  color: var(--azul-titulo);
+  margin-bottom: 20px;
+}
+
+#contenido .pregunta {
+  width: 100%;
+  margin: 16px 0;
+  text-align: center;
+}
+
+#contenido .pregunta,
+#contenido .pregunta .estrellas {
+  justify-content: center;
+}
+#contenido .pregunta {
+  width: 100%;
+  margin: 16px 0;
+}
+
+#contenido .pregunta p {
+  color: var(--texto);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+#contenido .opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.estrellas {
+  display: flex;
+  gap: 5px;
+}
+
+.estrellas .estrella {
+  background: transparent;
+  border: none;
+  padding: 0 2px;
+  font-size: 32px;
+  color: #bdbdbd;
+  cursor: pointer;
+}
+
+.estrellas .estrella.seleccionada {
+  color: #ffc107;
+}
+
+#contenido button,
+#contenido .btn {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 6px 6px 0 0;
+  background: var(--azul-boton);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#contenido button:hover,
+#contenido .btn:hover {
+  background: var(--azul-oscuro);
+}
+
+.contenedor-escaner {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px -12px rgba(47, 110, 180, 0.35);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 6px;
+  background: var(--azul-boton);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--azul-oscuro);
+  transform: translateY(-2px);
+}
+
+#reader {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  display: none;
+}
+
+#resultado {
+  display: none;
+  margin-top: 25px;
+}
+
+#resultado h3 {
+  color: var(--azul-titulo);
+}
+
+#textoQR {
+  color: var(--texto);
+  overflow-wrap: anywhere;
+}
+
+#enlaceQR {
+  display: none;
+}
+
+
+@media (max-width: 600px) {
+  .contenedor-escaner {
+    width: 85%;
+    padding: 20px;
+  }
+}

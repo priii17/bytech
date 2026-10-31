@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentos</title>
+    <link rel="stylesheet" href="../css/documento.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body>
+    <header class="barra-navegador">
+      <nav>
+        <ul>
+          <li><a href="../conexion/real_index.html">Inicio</a></li>
+          <li><a href="../documento/docs.html">Documentos</a></li>
+          <li><a href="../traslado/Traslado.html">Traslados</a></li>
+          <li><a href="../traslado/registro_elementos.html">Registros</a></li>
+          <li><a href="../encuestas/encuestas.html">Encuestas</a></li>
+          <li><a href="../ayuda/ayuda.html">Ayuda</a></li>
+          <li><a href="../conexion/perfil.html">Perfil</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div id="lista-documentos"></div>
+
+      <dialog id="ventanaQr">
+        <div id="qrContenedor"></div>
+        <button id="cerrarQr">Cerrar</button>
+      </dialog>
+      <script>
+        fetch("../php/verdocumento.php")
+          .then((respuesta) => respuesta.text())
+          .then((datos) => {
+            document.getElementById("lista-documentos").innerHTML = datos;
+          })
+          .catch((error) => {
+            console.log("Error:", error);
+          });
+      </script>
+    </main>
+    <footer>
+      <p>&copy; 2026 Bytech .Todos los derechos reservados.</p>
+      <p>hospitaldeclinicas@gmail.com</p>
+      <p>1953/0800 1953</p>
+    </footer>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="../js/verqr.js"></script>
+  <script src="../js/abrirventana.js"></script>
+</html>

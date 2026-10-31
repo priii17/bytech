@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar ambulancia</title>
+    <link rel="stylesheet" href="../css/insumosyequipamientos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+
+    <form class="form" id="registro" action="../php/ambulancia.php" method="POST">
+
+        <a href="../traslado/registro_elementos.html" class="boton" aria-label="Volver">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span class="tooltiptext">volver</span>
+        </a>
+
+        <p class="title">Registrar ambulancia</p>
+        <p class="message">Completa los datos de la ambulancia.</p>
+
+        <label>
+            <input class="input" type="text" name="matricula" id="matricula" placeholder=" " required>
+            <span>Matrícula</span>
+        </label>
+
+        <label>
+            <input class="input" type="text" name="modelo" id="modelo" placeholder=" " required>
+            <span>Modelo</span>
+        </label>
+
+        <button class="submit" type="submit">Ingresar</button>
+
+    </form>
+
+    <script src="../js/registroambulancia.js"></script>
+</body>
+</html>
