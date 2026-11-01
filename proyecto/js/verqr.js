@@ -5,7 +5,7 @@ const lista = document.getElementById("lista-documentos");
 lista.addEventListener("click", (e) => {
   //sube desde lista hasta encontrar btn-ver
   const boton = e.target.closest(".ver");
-  if (!boton) return; // si el clic no fue en el boton ver no hace nada
+  if (!boton) return; // si el click no fue en el boton ver no hace nada
 
   //vacia el contenedor para borrar el QR anterior y que no se acumulen
   contenedor.innerHTML = "";
