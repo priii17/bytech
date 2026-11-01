@@ -1,23 +1,21 @@
 
 #!/bin/bash
 
-
-
 echo "MONITOREO DEL SERVIDOR"
 echo "Fecha y hora:"
 date
 
-# Revisión de disco
+# revisión de disco
 echo "----------------------"
 echo "Uso del disco:"
 df -h /
 
-# Memoria usada
+# memoria usada
 echo "----------------------"
 echo "Memoria RAM:"
 free -h
 
-#  CPU
+# uso del CPU
 echo "----------------------"
 echo "Uso del CPU:"
 top -bn1 | grep "Cpu(s)"
